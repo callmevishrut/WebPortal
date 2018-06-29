@@ -1,7 +1,55 @@
-.bg-light
+.navbar
 {
-    color: transparent;
-    background-image: url(assets/Texturecopy3.png);
-    background-repeat: repeat;
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: rgb(255, 249, 233);filter: alpha(opacity=50);
+    color: black;
+    padding: 1% 0;
+    font-size: 1.15em;
+    border: 0;
 
+}
+body
+{
+    background: url(assets/texture.png);
+    background-repeat: repeat;
+}
+.navbar-brand
+{
+    min-height: 90px;
+    float:left;
+}
+.ncf
+{
+    padding-left:75px;
+    padding-right:75px;
+    vertical-align: middle;
+}
+.navbar-default .navbar-nav .active a, .navbar-default .navbar-nav .active a:focus,.navbar-default .navbar-nav .active a:hover
+{
+    background-color: rgb(255, 249, 233);filter: alpha(opacity=50);
+}
+.navbar-default .navabr-nav li a
+{
+
+}
+.moc
+{
+    float:right;
+}
+.moc a
+{
+
+}
+.moc a:hover
+{
+    
+}
+#myNavbar
+{
+    padding-top:20px;
+}
+footer
+{
+    background-color: rgb(255, 249, 233);filter: alpha(opacity=50);
 }
