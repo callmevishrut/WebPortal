@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+    mysql_connect("127.0.0.1","root","") or die("Couldnt connect to database");
+    mysql_select_db("simplecounter") or die("Couldnt find database");
+
+    $find_count = mysql_query("SELECT * FROM user_count");
+
+    while ($row = mysql_fetch_assoc($find_count))
+    {
+        $current_counts = $row['counts'];
+        $new_count = $current_counts + 1;
+        $update_count = mysql_query("UPDATE 'simplecounter' . 'user_count' SET 'counts' = $new_count");
+    }
+?>
 <head>
   <title>Celebrating 150 years of GandhiJi</title>
   <meta charset="utf-8">
@@ -45,13 +58,10 @@
       <div class="item active"  style="vertical-align: bottom;">
           <div class="row" style="padding-top:11%;">
               <div class="col-sm-2">
-                  <img src="assets/3.png" class="img-responsive" style="position:relative;left:10%; height:inherit;">
               </div>
               <div class="col-sm-6">
-                  <img src="assets/1.png" class="img-responsive" style="height: inherit;">
               </div>
-              <div class="col-sm-4">
-                  
+              <div class="col-sm-4"> 
               </div>
             </div>
       </div>
@@ -72,4 +82,8 @@
    
   </footer>
 </body>
+
+
 </html>
+
+
